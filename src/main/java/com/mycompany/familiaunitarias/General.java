@@ -33,7 +33,9 @@ public void General() {
         int codigo = sc.nextInt();
         buscar(codigo);
     }
-
+    /**
+     * Metodo que quema datos en el mapa
+     */
     private void quemarMapa() {
         
         mapaAbuelo = new HashMap<>();
@@ -55,7 +57,11 @@ public void General() {
         mapaAbuelo.get(2).getMapaPersona().get(8).getMapaPersona().put(16, new Persona(16, "---Diana"));
         
     }
-
+    /**
+     * Metodo que realiza consulta teniendo el codigo como parametro
+     * @param codigo
+     * @return 
+     */
     public String buscar(int codigo) {
         
         quemarMapa();
