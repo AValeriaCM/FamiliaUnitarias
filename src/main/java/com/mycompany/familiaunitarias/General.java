@@ -39,20 +39,20 @@ public void General() {
         mapaAbuelo = new HashMap<>();
         mapaAbuelo.put(1, new Persona(1, "Juan"));
         mapaAbuelo.put(2, new Persona(2, "Jose"));
-        mapaAbuelo.get(1).getMapaPersona().put(3, new Persona(3, "Andres"));
-        mapaAbuelo.get(1).getMapaPersona().put(4, new Persona(4, "Maria"));
-        mapaAbuelo.get(1).getMapaPersona().put(5, new Persona(5, "Carlos"));
-        mapaAbuelo.get(2).getMapaPersona().put(6, new Persona(6, "Alberto"));
-        mapaAbuelo.get(2).getMapaPersona().put(7, new Persona(7, "Jimmy"));
-        mapaAbuelo.get(2).getMapaPersona().put(8, new Persona(8, "Jhon"));
-        mapaAbuelo.get(1).getMapaPersona().get(3).getMapaPersona().put(9, new Persona(9, "Juana"));
-        mapaAbuelo.get(1).getMapaPersona().get(3).getMapaPersona().put(10, new Persona(10, "Paola"));
-        mapaAbuelo.get(1).getMapaPersona().get(4).getMapaPersona().put(11, new Persona(11, "Sofia"));
-        mapaAbuelo.get(1).getMapaPersona().get(5).getMapaPersona().put(12, new Persona(12, "Jaime"));
-        mapaAbuelo.get(2).getMapaPersona().get(6).getMapaPersona().put(13, new Persona(13, "Tatiana"));
-        mapaAbuelo.get(2).getMapaPersona().get(6).getMapaPersona().put(14, new Persona(14, "Fernanda"));
-        mapaAbuelo.get(2).getMapaPersona().get(7).getMapaPersona().put(15, new Persona(15, "Viviana"));
-        mapaAbuelo.get(2).getMapaPersona().get(8).getMapaPersona().put(16, new Persona(16, "Diana"));
+        mapaAbuelo.get(1).getMapaPersona().put(3, new Persona(3, "--Andres"));
+        mapaAbuelo.get(1).getMapaPersona().put(4, new Persona(4, "--Maria"));
+        mapaAbuelo.get(1).getMapaPersona().put(5, new Persona(5, "--Carlos"));
+        mapaAbuelo.get(2).getMapaPersona().put(6, new Persona(6, "--Alberto"));
+        mapaAbuelo.get(2).getMapaPersona().put(7, new Persona(7, "--Jimmy"));
+        mapaAbuelo.get(2).getMapaPersona().put(8, new Persona(8, "--Jhon"));
+        mapaAbuelo.get(1).getMapaPersona().get(3).getMapaPersona().put(9, new Persona(9, "---Juana"));
+        mapaAbuelo.get(1).getMapaPersona().get(3).getMapaPersona().put(10, new Persona(10, "---Paola"));
+        mapaAbuelo.get(1).getMapaPersona().get(4).getMapaPersona().put(11, new Persona(11, "---Sofia"));
+        mapaAbuelo.get(1).getMapaPersona().get(5).getMapaPersona().put(12, new Persona(12, "---Jaime"));
+        mapaAbuelo.get(2).getMapaPersona().get(6).getMapaPersona().put(13, new Persona(13, "---Tatiana"));
+        mapaAbuelo.get(2).getMapaPersona().get(6).getMapaPersona().put(14, new Persona(14, "---Fernanda"));
+        mapaAbuelo.get(2).getMapaPersona().get(7).getMapaPersona().put(15, new Persona(15, "---Viviana"));
+        mapaAbuelo.get(2).getMapaPersona().get(8).getMapaPersona().put(16, new Persona(16, "---Diana"));
         
     }
 
@@ -99,7 +99,7 @@ public void General() {
                 int i = Integer.parseInt(it.next().toString());
                 if (mapaAbuelo.get(i).getMapaPersona().containsKey(codigo)) {
                     System.out.println("Padre: " + mapaAbuelo.get(i).getMapaPersona().get(codigo).getNombre() + " Abuelo : "
-                            + mapaAbuelo.get(i).getMapaPersona() + " Hijos: ");
+                            + mapaAbuelo.get(i).getNombre() + " Hijos: ");
                     parte4 = mapaAbuelo.get(i).getMapaPersona().get(codigo).getNombre();
                     parte5 = mapaAbuelo.get(i).getNombre();
                     Iterator itera = mapaAbuelo.get(i).getMapaPersona().get(codigo).getMapaPersona().keySet().iterator();
