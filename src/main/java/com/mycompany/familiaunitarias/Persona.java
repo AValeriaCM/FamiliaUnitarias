@@ -26,6 +26,7 @@ public class Persona {
     public Persona(int identificacion, String nombre) {
         this.nombre = nombre;
         this.identificacion = identificacion;
+        mapaPersona = new HashMap<>();
     }
     /**
      * 
